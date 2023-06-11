@@ -3,7 +3,7 @@ kind: Jaeger
 metadata:
   name: jaeger
 spec:
-  strategy: allInOne 
+  strategy: allinone
   storage:
     type: memory 
     options: 
