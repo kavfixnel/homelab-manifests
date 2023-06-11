@@ -40,23 +40,23 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  annotation:
+  annotations:
     metallb.universe.tf/ip-allocated-from-pool: main
   name: example-hotrod
   namespace: default
 spec:
   ports:
-  - port: 8080
-    protocol: TCP
+  - name: http0
+    port: 8080
     targetPort: 8080
-  - port: 8081
-    protocol: TCP
+  - name: http1
+    port: 8081
     targetPort: 8081
-  - port: 8082
-    protocol: TCP
+  - name: http2
+    port: 8082
     targetPort: 8082
-  - port: 8083
-    protocol: TCP
+  - name: http3
+    port: 8083
     targetPort: 8083
   selector:
     name: example-hotrod
