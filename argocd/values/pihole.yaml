@@ -1,0 +1,8 @@
+persistentVolumeClaim:
+  enabled: true
+
+serviceDns:
+  loadBalancerIP: 10.0.0.253
+  annotations:
+    metallb.universe.tf/ip-allocated-from-pool: main
+  type: LoadBalancer
